@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
 
-const FirstApp = ({ title, subTitle }) => {
+const FirstApp = ({ title, subTitle, name }) => {
   return (
     <>
-      <h1>{title}</h1>
+      <h1> {title} </h1>
       <p>{subTitle}</p>
+      <p>{name}</p>
     </>
   )
 }
@@ -15,8 +16,9 @@ FirstApp.propTypes = {
 }
 
 FirstApp.defaultProps = {
-  title: 'Your Name Here',
-  subTitle: 'Your SubTitle Here!'
+  title: 'Your Hello World Here',
+  subTitle: 'Your SubTitle Here!',
+  name: 'Your Name Here!'
 }
 
 export { FirstApp }

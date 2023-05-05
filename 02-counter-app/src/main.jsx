@@ -9,8 +9,8 @@ ReactDOM
   .createRoot(document.querySelector('#root'))
   .render(
     <React.StrictMode>
-      {/* <App />
-      <FirstApp title={'I\'m Alexis'} subTitle='And this is a subtitle' /> */}
-      <CounterApp value={0} />
+      {/* <App /> */}
+      <FirstApp title='Hello World!' subTitle='And this is a subtitle' name={'I\'m Alexis'} />
+      {/* <CounterApp value={0} /> */}
     </React.StrictMode>
   )
