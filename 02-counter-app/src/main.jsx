@@ -10,7 +10,7 @@ ReactDOM
   .render(
     <React.StrictMode>
       {/* <App /> */}
-      <FirstApp title='Hello World!' subTitle='And this is a subtitle' name={'I\'m Alexis'} />
-      {/* <CounterApp value={0} /> */}
+      {/* <FirstApp title='Hello World!' subTitle='And this is a subtitle' name={'I\'m Alexis'} /> */}
+      <CounterApp value={0} />
     </React.StrictMode>
   )

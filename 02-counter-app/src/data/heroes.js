@@ -22,7 +22,7 @@ const heroes = [
   {
     id: 5,
     name: 'Wolverine',
-    owner: 'Marvel'
+    owner: 'Marvelsaasdsads'
   }
 ]
 

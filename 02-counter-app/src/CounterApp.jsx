@@ -31,6 +31,7 @@ const CounterApp = ({ value }) => {
           -1
         </button>
         <button
+          aria-label='btn-reset'
           onClick={handleReset}
         >
           Reset
