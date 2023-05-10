@@ -11,7 +11,7 @@ export const useFetchGifs = (category) => {
   }
 
   useEffect(() => {
-    setTimeout(() => getImages(), 1000)
+    getImages()
   }, [])
 
   return {
