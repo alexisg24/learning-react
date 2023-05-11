@@ -7,7 +7,7 @@ const GifGrid = ({ category }) => {
   return (
     <>
       {isLoading && <h2 style={{ textAlign: 'center' }}>Loading...</h2>}
-      <h3>{category}</h3>
+      <p className='category'>{category}</p>
       <section className='card-grid'>
         {
           images.map((img) => (

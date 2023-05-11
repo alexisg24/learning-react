@@ -21,7 +21,7 @@ const AddCategory = ({ onNewCategory }) => {
         value={inputValue}
         onChange={handleInputChange}
       />
-      <button>Add</button>
+      <button className='searchButton'>🔎</button>
     </form>
   )
 }

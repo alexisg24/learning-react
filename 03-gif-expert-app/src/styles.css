@@ -7,63 +7,123 @@ html{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-size: 62.5%;
+}
+body{
+  margin: 0;
 }
 
-body {
-    padding: 60px;
-  }
+form {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+}
 
+h1{
+  text-align: center;
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
 input {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 5px 0px 0px 5px;
     border: 1px solid rgb(97, 32, 158);
-    color: black;
-    font-size: 1.2rem;
+    border-right: 0px;
+    color: rgb(94, 94, 94);
     outline: none;
     padding: 10px 15px;
-    width: 100%;
+    width: 95%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: ease-in 0.3s;
   }
-  
-  h2 {
-    font-size: 1.5rem;
+
+input:hover{
+  font-style: italic;
+}
+
+input::placeholder{
+  color: rgb(153, 153, 153);
+}
+
+.searchButton {
+  text-align: center;
+  background-color: white;
+  border: 1px solid rgb(97, 32, 158);
+  color: black;
+  outline: none;
+  padding: 10px 10px;
+  font-size: 1.6rem;
+  border-radius: 0px 5px 5px 0px;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+
+.searchButton:hover{
+  background-color: rgb(97, 32, 158);
+}
+
+
+.category {
+  font-size: 3.2rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #3e3e3e;
+  text-align: start;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card-grid {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+  column-gap: 15px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.card {
+  align-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  height: 0%;  
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card img{
+  max-height: 250px;
+  width: 100%;
+}
+
+.card p {
+  background-color: white;
+  flex: 1;
+  font-size: 1.5rem;
+  margin-top: 5px;
+  padding: 5px 20px 0px 20px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  form {
+    width: 95%;
   }
-  
-  h3 {
-    font-size: 3rem;
-    margin-bottom: 5px;
+  .card-grid{
+    width: 95%;
   }
-  
-  .card-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card {
-    align-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
-    display: flex;
-    flex-direction: column;
-    height: 0%;  
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    overflow: hidden;
-  }
-  
-  .card p {
-    background-color: white;
-    flex: 1;
-    font-size: 1.5rem;
-    margin-top: 5px;
-    padding: 5px 20px 0px 20px;
-    text-align: center;
-  }
-  
-  .card img {
-    width: 100%;
-  }
+}
