@@ -1,18 +1,26 @@
-import { useReducer } from 'react'
-import { todoReducer } from './todoReducer'
-const initialState = [
-  { id: 1, description: 'Recolectar Piedra del Alma', done: false }
-]
+import { TodoList } from './components/TodoList'
+import { TodoForm } from './components/TodoForm'
+import { useTodos } from '../hooks'
+
 const TodoApp = () => {
-  const [todo, dispatch] = useReducer(todoReducer, initialState)
+  const { todos, handleSubmit, handleDelete, handleToggle, todoCounter, todoPending } = useTodos()
   return (
     <>
-      <h1>TodoApp</h1>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-      </ul>
+      <h1>TodoApp: {todoCounter}. <span>Pending: {todoPending}</span></h1>
+
+      <div className='row mt-3'>
+
+        <div className='col-7'>
+          <TodoList todos={todos} handleDelete={handleDelete} handleToggle={handleToggle} />
+        </div>
+
+        <div className='col-5'>
+          <h4>Add TODO</h4>
+          <hr />
+          <TodoForm handleSubmit={handleSubmit} />
+        </div>
+
+      </div>
     </>
   )
 }
