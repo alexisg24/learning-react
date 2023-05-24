@@ -5,6 +5,7 @@ const TodoItem = ({ id, description, done, handleDelete, handleToggle }) => {
         <span
           className={`${(done) ? 'text-decoration-line-through' : ''}`}
           onClick={() => handleToggle(id)}
+          aria-label='spanElement'
         >{description}
         </span>
         <button
