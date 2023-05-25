@@ -1,4 +1,4 @@
-import { todoReducer } from '../../../src/08-useReducer/todoReducer'
+import { todoReducer } from '../../src/08-useReducer/todoReducer'
 
 describe('tests in todoReducer', () => {
   const initialState = [{ id: 1, description: 'Demo Todo', done: false }]

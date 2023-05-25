@@ -1,9 +1,9 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import { MultipleCustomHooks } from '../../../src/03-examples/MultipleCustomHooks'
-import { useFetch } from '../../../src/hooks/useFetch'
-import { useCounter } from '../../../src/hooks/useCounter'
-jest.mock('../../../src/hooks/useFetch')
-jest.mock('../../../src/hooks/useCounter')
+import { MultipleCustomHooks } from '../../src/03-examples/MultipleCustomHooks'
+import { useFetch } from '../../src/hooks/useFetch'
+import { useCounter } from '../../src/hooks/useCounter'
+jest.mock('../../src/hooks/useFetch')
+jest.mock('../../src/hooks/useCounter')
 
 describe('tests in <MultipleCustomHooks />', () => {
   const increment = jest.fn()

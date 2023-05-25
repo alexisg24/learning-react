@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in <HomePage /> should render the component without the user 1`] = `
+<div>
+  <h1>
+    HomePage 
+    <small />
+  </h1>
+  <hr />
+  <pre
+    aria-label="pre-selector"
+  >
+    null
+  </pre>
+</div>
+`;

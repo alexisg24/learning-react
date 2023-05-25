@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
-import { TodoApp } from '../../../../src/08-useReducer/TodoApp'
-import { useTodos } from '../../../../src/hooks/useTodos'
+import { TodoApp } from '../../../src/08-useReducer/TodoApp'
+import { useTodos } from '../../../src/hooks/useTodos'
 
-jest.mock('../../../../src/hooks/useTodos')
+jest.mock('../../../src/hooks/useTodos')
 
 describe('Tests in <TodoApp />', () => {
   useTodos.mockReturnValue({

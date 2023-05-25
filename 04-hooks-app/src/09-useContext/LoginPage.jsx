@@ -7,11 +7,12 @@ const LoginPage = () => {
     <>
       <h1>LoginPage</h1>
       <hr />
-      <pre>
+      <pre aria-label='user-info'>
         {JSON.stringify(user, null, 3)}
       </pre>
       <button
         className='btn btn-primary'
+        aria-label='newUser-button'
         onClick={() => newUser()}
       >Set User
       </button>

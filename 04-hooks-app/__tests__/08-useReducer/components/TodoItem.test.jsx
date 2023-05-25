@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import { TodoItem } from '../../../../src/08-useReducer/components/TodoItem'
+import { TodoItem } from '../../../src/08-useReducer/components/TodoItem'
 
 describe('tests in <TodoItem />', () => {
   const todo = { id: 1, description: 'Test todo', done: false }
