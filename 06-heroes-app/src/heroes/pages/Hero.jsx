@@ -15,7 +15,7 @@ const HeroPage = () => {
     return (<Navigate to='/marvel' />)
   }
   return (
-    <section className='row mt-5'>
+    <section className='row mt-5 animate__animated animate__fadeInLeftBig'>
       <div className='col-4'>
         <img
           src={url}

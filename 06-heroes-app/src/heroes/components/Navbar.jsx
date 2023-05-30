@@ -35,6 +35,12 @@ export const Navbar = () => {
           >
             DC
           </NavLink>
+          <NavLink
+            className={handleActive}
+            to='/search'
+          >
+            Search
+          </NavLink>
         </div>
       </div>
 

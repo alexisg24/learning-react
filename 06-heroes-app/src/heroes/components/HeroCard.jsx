@@ -5,7 +5,7 @@ const HeroCard = ({ id, superhero, publisher, alter_ego, first_appearance, chara
   const heroImageUrl = `/assets/heroes/${id}.jpg`
   // const charactersByHero = (<p className='card-text'>{characters}</p>)
   return (
-    <section className='col'>
+    <section className='col animate__animated animate__fadeIn'>
       <article className='card'>
         <div className='row no-gutters'>
           <div className='col-4'>
