@@ -7,7 +7,7 @@ const PrivateRoute = ({ children }) => {
   const { pathname, search } = useLocation()
   const lastPath = pathname + search
   useEffect(() => {
-    window.localStorage.setItem('lastPath', JSON.stringify(lastPath))
+    window.localStorage.setItem('lastPath', lastPath)
   }, [lastPath, search])
 
   return (logged)
