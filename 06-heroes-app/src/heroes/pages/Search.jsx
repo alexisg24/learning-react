@@ -44,12 +44,12 @@ const SearchPage = () => {
           {
             (hero === '')
               ? (
-                <article className='alert alert-primary'>
+                <article className='alert alert-primary' aria-label='search-hero'>
                   Search a Hero
                 </article>
                 )
               : (heroes.length === 0) && (
-                <article className='alert alert-danger'>
+                <article className='alert alert-danger' aria-label='hero-not-found'>
                   No Hero with <b>{hero}</b>
                 </article>
                 )

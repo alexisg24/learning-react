@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests in Search should return the component with default values 1`] = `
+<div>
+  <h1>
+    SearchPage
+  </h1>
+  <hr />
+  <div
+    class="row"
+  >
+    <section
+      class="col-5"
+    >
+      <h4>
+        Searching
+      </h4>
+      <hr />
+      <form>
+        <input
+          autocomplete="off"
+          class="form-control"
+          name="searchText"
+          placeholder="Search a hero"
+          type="text"
+          value=""
+        />
+        <button
+          class="btn btn-outline-primary mt-1"
+        >
+          Search
+        </button>
+      </form>
+    </section>
+    <section
+      class="col-7"
+    >
+      <h4>
+        Result
+      </h4>
+      <hr />
+      <article
+        aria-label="search-hero"
+        class="alert alert-primary"
+      >
+        Search a Hero
+      </article>
+    </section>
+  </div>
+</div>
+`;
