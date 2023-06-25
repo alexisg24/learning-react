@@ -1,4 +1,4 @@
-import { AppRouter } from './router/AppRoter'
+import { AppRouter } from './router/AppRouter'
 import { AppTheme } from './theme'
 
 const JournalApp = () => {
