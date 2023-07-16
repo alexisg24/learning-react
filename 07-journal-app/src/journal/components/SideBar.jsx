@@ -26,7 +26,7 @@ const SideBar = ({ drawerWith }) => {
         <List>
           {
                 notes.map(({ id, ...note }) => (
-                  <SidebarItem key={id} {...note} />
+                  <SidebarItem key={id} {...note} id={id} />
                 ))
             }
         </List>

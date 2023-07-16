@@ -24,18 +24,35 @@ export const journalSlice = createSlice({
     },
     setActiveNote: (state, action) => {
       state.active = action.payload
+      state.savedMessage = ''
     },
     setNotes: (state, action) => {
       state.notes = action.payload
+      state.savedMessage = ''
     },
     setSaving: (state) => {
-
+      state.isSaving = true
+      // Todo: message
     },
     updateNote: (state, action) => {
-
+      state.isSaving = false
+      state.notes = state.notes.map(note => (note.id !== action.payload.id) ? note : action.payload)
+      state.savedMessage = `${action.payload.title}, actualizada correctamente!`
+    },
+    setPhotosToActiveNote: (state, action) => {
+      state.active.imagesUrls = [...state.active.imagesUrls, ...action.payload]
+      state.isSaving = false
+    },
+    clearNotesLogout: (state, action) => {
+      state.isSaving = false
+      state.savedMessage = ''
+      state.notes = []
+      state.active = null
     },
     deleteNoteById: (state, action) => {
-
+      state.notes = state.notes.filter(note => note.id !== action.payload)
+      state.active = null
+      state.isSaving = false
     }
   }
 })
@@ -48,5 +65,7 @@ export const {
   setSaving,
   updateNote,
   deleteNoteById,
-  savingNewNote
+  savingNewNote,
+  setPhotosToActiveNote,
+  clearNotesLogout
 } = journalSlice.actions

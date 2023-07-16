@@ -8,6 +8,10 @@ const useForm = (initialForm = {}, formValidation = {}) => {
     createValidators()
   }, [formState])
 
+  useEffect(() => {
+    setFormState(initialForm)
+  }, [initialForm])
+
   const onInputChange = ({ target }) => {
     const { name, value } = target
     setFormState(prev => ({
