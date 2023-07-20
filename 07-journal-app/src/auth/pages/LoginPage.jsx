@@ -31,13 +31,13 @@ const LoginPage = () => {
 
   return (
     <AuthLayout title='Login'>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} aria-label='submit-form'>
         <Grid container>
           <Grid item xs={12} sx={{ mt: 2 }}>
             <TextField label='Email' type='email' placeholder='mail@google.com' fullWidth onChange={onInputChange} value={email} name='email' />
           </Grid>
           <Grid item xs={12} sx={{ mt: 2 }}>
-            <TextField label='Password' type='password' placeholder='Password' fullWidth onChange={onInputChange} value={password} name='password' />
+            <TextField label='Password' type='password' placeholder='Password' fullWidth onChange={onInputChange} value={password} name='password' inputProps={{ 'aria-label': 'password' }} />
           </Grid>
 
           <Grid container spacing={2} sx={{ mb: 2, mt: 1 }}>
@@ -48,7 +48,7 @@ const LoginPage = () => {
               <Button variant='contained' fullWidth type='submit' disabled={isAuthenticating}>Login</Button>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Button variant='contained' fullWidth onClick={onGoogleSignIn} disabled={isAuthenticating}>
+              <Button variant='contained' fullWidth onClick={onGoogleSignIn} disabled={isAuthenticating} aria-label='google-btn'>
                 <Google />
                 <Typography sx={{ ml: 1 }}>Google</Typography>
               </Button>

@@ -2,18 +2,36 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
+import { getEnvironments } from '../helpers'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
+const {
+  VITE_APIKEY,
+  VITE_AUTHDOMAIN,
+  VITE_PROJECTID,
+  VITE_STORAGEBUCKET,
+  VITE_MESSAGINGSENDERID,
+  VITE_APPID
+} = getEnvironments()
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyAXXKljNRo3Dokq-KyqqkmYjj71gKWCofM',
-  authDomain: 'react-cursos-62c59.firebaseapp.com',
-  projectId: 'react-cursos-62c59',
-  storageBucket: 'react-cursos-62c59.appspot.com',
-  messagingSenderId: '510586506327',
-  appId: '1:510586506327:web:1e75723bfcb3cbec0aa712'
+  apiKey: VITE_APIKEY,
+  authDomain: VITE_AUTHDOMAIN,
+  projectId: VITE_PROJECTID,
+  storageBucket: VITE_STORAGEBUCKET,
+  messagingSenderId: VITE_MESSAGINGSENDERID,
+  appId: VITE_APPID
 }
+
+// testing
+// const firebaseConfig = {
+//   apiKey: 'AIzaSyAduChGH7qEDAdgqJeITI5uCarekgyRHdc',
+//   authDomain: 'test-react-journal-23575.firebaseapp.com',
+//   projectId: 'test-react-journal-23575',
+//   storageBucket: 'test-react-journal-23575.appspot.com',
+//   messagingSenderId: '909471401817',
+//   appId: '1:909471401817:web:47b0cb72f684108a19ee48'
+// }
 
 // Initialize Firebase
 export const FirebaseApp = initializeApp(firebaseConfig)
