@@ -1,0 +1,35 @@
+{
+  "name": "10-mern-calendar-backend",
+  "version": "1.0.0",
+  "description": "CalendarApp Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "node --watch-path=./ index.js",
+    "start": "node index.js --delay"
+  },
+  "keywords": [
+    "Javascript",
+    "Express",
+    "MongoDB",
+    "MERN"
+  ],
+  "author": "Alexis Garcia @alexisg24",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.1",
+    "moment": "^2.29.4",
+    "mongoose": "^7.4.1"
+  }
+}
