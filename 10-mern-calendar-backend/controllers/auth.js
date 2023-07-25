@@ -1,4 +1,4 @@
-const { generateJWT } = require('../helpers/JWT')
+const { generateJWT } = require('../helpers/jwt')
 const { encryptString } = require('../helpers/encryptString')
 const User = require('../models/User')
 
