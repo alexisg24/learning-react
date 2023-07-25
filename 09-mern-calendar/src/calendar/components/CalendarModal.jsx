@@ -33,7 +33,7 @@ export const CalendarModal = () => {
 
   const titleClass = useMemo(() => {
     if (!formSubmitted) return ''
-    if (formValues.title.length > 0) return ''
+    if (formValues.title.length > 3) return ''
     return 'is-invalid'
   }, [formValues.title, formSubmitted])
 
@@ -75,7 +75,7 @@ export const CalendarModal = () => {
       return true
     }
 
-    if (formValues.title.length <= 0) return true
+    if (formValues.title.length <= 3) return true
     await startSavingEvent(formValues)
     closeDateModal()
     setFormSubmitted(false)
